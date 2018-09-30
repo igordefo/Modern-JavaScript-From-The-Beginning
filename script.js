@@ -128,3 +128,58 @@ function getRandomInt(min, max) {
 console.log(getRandomInt(10, 20));
 
 console.log(num);
+
+// Concatenation
+const firstName = 'William';
+const lastName = 'Johnson';
+const age = 28;
+const str = 'Hello, there my name is Igor';
+const tags = 'web development, web design, programming'
+
+let concat;
+concat = firstName + ' ' + lastName;
+
+// Append
+concat = 'Igor ';
+concat += 'Posunko';
+
+concat = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+// Concat method
+concat = firstName.concat(' ', lastName);
+
+// Changing case
+concat = firstName.toUpperCase();
+concat = firstName.toLowerCase();
+
+// Escaping
+let ecp = 'That\'s awesome, I can\'t wait'; //Экранирование символов
+
+// Length
+
+let len = firstName.length; // Длина строки
+
+// indexOf()
+concat = firstName.indexOf('l'); // Определенние позиции буквы в слове
+concat = firstName.lastIndexOf('l'); // Определенние позиции буквы в слове с конца
+
+concat = firstName.charAt('2');
+concat = firstName.charAt(firstName.length - 1); // Получить последний символ строки
+concat = firstName.substring(0, 4); // Возвращает подстроку строки между двумя индексами
+
+// Slice
+concat = firstName.slice(0, 5); // Извлекает часть строки и возвращает новую строку.
+
+// Split
+concat = str.split(' ');
+concat = tags.split(',');
+
+// Replace
+concat = str.replace('Igor', 'Jack');
+
+// Includes
+concat = str.includes('Hello'); // Определяет, содержит ли строка определённый элемент
+
+console.log(len);
+console.log(ecp);
+console.log(concat);
