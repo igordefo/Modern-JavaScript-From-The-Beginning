@@ -183,3 +183,94 @@ concat = str.includes('Hello'); // Определяет, содержит ли �
 console.log(len);
 console.log(ecp);
 console.log(concat);
+
+//Template literals;
+
+const userName = 'Igor';
+const userAge = '31';
+const userJob = 'Trainee';
+const userCity = 'Melitopol';
+let html;
+function hello() {
+  return 'Hello';
+}
+
+
+// Without template strings (es5)
+html = '<ul>' +
+       '<li>Name: ' + userName + '</li>' +
+       '<li>Age: ' + userAge + '</li>' +
+       '<li>Job: ' + userJob + '</li>' +
+       '<li>City: ' + userCity + '</li>';
+
+// With template strings (es6)       
+html = `
+      <ul>
+        <li>Name: ${userName}</li>
+        <li>Age: ${userAge}</li>
+        <li>Job: ${userJob}</li>
+        <li>City: ${userCity}</li>
+        <li>${2+2}</li>
+        <li>${hello()}</li>
+        <li>${userAge > 30 ? 'Over 30' : 'Under 30'}</li>
+      </ul>
+`;
+     
+document.body.innerHTML = html;
+
+// Create some arrays
+const numbers1 = [43,56,33,23,44,36,5];
+const numbers2 = new Array(22,45,33,76,54);
+const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+
+let arr;
+
+//Get array length
+arr = numbers1.length;
+// Check if is array
+arr = Array.isArray(numbers1);
+// Get single value
+arr = numbers1[3];
+// Insert into array
+numbers1[2] = 100;
+// Find index of value
+arr = numbers1.indexOf(100);
+// Mutating arrays
+// Add on to end
+numbers1.push(250);
+// Add in to front 
+numbers1.unshift(120);
+// Take off from end
+numbers1.pop(); // Удаляет последний элемент из массива и возвращает его.
+// Take off from front
+numbers1.shift(); // Удаляет первый элемент из массива
+// Splice values
+numbers1.splice(1,3); // Удаляет выбранные элементы из массива
+// Reverse array
+numbers1.reverse(); // Изменяет порядок элементов в Array на обратный.
+// Concatenate array
+arrconcat = numbers1.concat(numbers2);
+
+// Sorting arrays
+arr = fruit.sort();
+arr = numbers1.sort();
+
+// Use the 'compare function'
+arr = arrconcat.sort(function(x,y){
+  return x - y;
+});
+
+// Reverse sort
+arr = arrconcat.sort(function(x,y){
+  return y - x;
+});
+
+// Find
+function under50(numb){
+  return numb < 50;
+}
+arr = numbers1.find(under50); // Возвращает наименьшее число меньше 50
+
+console.log(numbers1);
+console.log(arr);
