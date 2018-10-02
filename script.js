@@ -274,3 +274,66 @@ arr = numbers1.find(under50); // Возвращает наименьшее чи�
 
 console.log(numbers1);
 console.log(arr);
+
+// Object literals
+const personObj = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age: 30,
+  email: 'steve@aol.com',
+  hobbies: ['music', 'sports'],
+  adress: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function() {
+    return 2018 - this.age;
+  }
+} 
+let obj;
+obj = personObj;
+
+// Get specific value
+obj = personObj.firstName;
+obj = personObj['lastName'];
+obj = personObj.age;
+obj = personObj.hobbies[1];
+obj = personObj.adress.state;
+obj = personObj.getBirthYear();
+
+console.log(obj);
+
+const people = [
+  {name: 'John', age: 30},
+  {name: 'Mike', age: 20},
+  {name: 'Nancy', age: 40}
+];
+
+for(let i = 0; i < people.length; i++) {
+  console.log(people[i].name);
+}
+
+// Date and time
+let time;
+
+const dateToday = new Date();
+const birthday = new Date('9/10/1981');
+
+time = dateToday.getMonth();
+time = dateToday.getDate();
+time = dateToday.getDay();
+time = dateToday.getFullYear();
+time = dateToday.getHours();
+time = dateToday.getMinutes();
+time = dateToday.getSeconds();
+time = dateToday.getMilliseconds();
+time = dateToday.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(03);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
+
+console.log(birthday);
