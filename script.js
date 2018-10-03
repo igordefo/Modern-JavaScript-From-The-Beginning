@@ -337,3 +337,118 @@ birthday.setMinutes(30);
 birthday.setSeconds(25);
 
 console.log(birthday);
+
+// If statements and comparison operator
+
+/*if (something true) {
+  do something
+} else {
+  do something else
+}*/
+const id = 100;
+// Equal to
+if (id == 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT')
+}
+// Not equal to
+if (id != 101) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT')
+}
+// Equal to value & type
+if (id === 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT')
+}
+
+if (id !== 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT')
+}
+// Test if undefined
+if (typeof id !== 'undefined') {
+  console.log(`The ID is ${id}`);
+} else {
+  console.log(`NO ID`);
+}
+// Greater or less than
+if (id > 200) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT')
+}
+// If else 
+const color = 'yellow';
+
+if (color === 'red') {
+  console.log('Color is red')
+} else if (color === 'blue') {
+  console.log('Color is blue')
+} else {
+  console.log('Color is not red or blue');
+}
+// Logical operators
+const logName = 'Steve';
+const logAge = 4;
+// AND &&
+if (logAge > 0 && logAge < 12) {
+  console.log(`${logName} is a child`);
+} else if (logAge >= 13 && logAge <= 19){
+  console.log(`${logName} is a teenager`)
+} else {
+  console.log(`${logName} is an adult`);
+}
+// OR ||
+if (age < 16 || age > 65) {
+  console.log(`${name} can not run in race`)
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// Ternary operator
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// Switches
+switch(color) {
+  case 'red':
+    console.log('Color is red');
+    break;
+  case 'blue':
+    console.log('Color is blue');
+    break;
+  default:
+    console.log('Color is not red or blue');
+    break;
+}
+
+let nDay;
+switch(new Date().getDay()) {
+  case 0:
+    nDay = 'Sunday';
+    break;
+  case 1:
+    nDay = 'Monday';
+    break;
+  case 2:
+    nDay = 'Tuesday';
+    break;
+  case 3:
+    nDay = 'Wednesday';
+    break;
+  case 4:
+    nDay = 'Thursday';
+    break;
+  case 5:
+    nDay = 'Friday';
+    break;
+  case 6:
+    nDay = 'Saturday';
+    break;
+}
+
+console.log(`Today is ${nDay}`);
