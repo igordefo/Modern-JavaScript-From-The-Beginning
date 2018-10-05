@@ -452,3 +452,49 @@ switch(new Date().getDay()) {
 }
 
 console.log(`Today is ${nDay}`);
+
+// Function declaration
+
+function greet (firstName = 'igor', lastName = 'defo') {
+//  console.log('Hello');
+  return 'Hello ' + firstName + ' ' + lastName;
+}
+
+console.log(greet());
+
+// Function expression
+
+const square = function(x = 9) {
+  return x*x;
+};
+
+console.log(square());
+
+// Immediately invokable function expression
+
+(function() {
+  console.log('IIFE Ran..');
+})();
+
+(function(name) {
+  console.log('Hello ' + name);
+})('Igor');
+
+// Property methods
+
+const todo = {
+  add: function() {
+    console.log('Add todo..');
+  },
+  edit: function(id) {
+    console.log(`Edit todo ${id}`);
+  }
+}
+
+todo.delete = function(){
+  console.log('Delete todo..');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
