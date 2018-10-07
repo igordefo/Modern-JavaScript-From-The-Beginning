@@ -497,4 +497,71 @@ todo.delete = function(){
 
 todo.add();
 todo.edit(22);
-todo.delete();
+todo.delete(); 
+
+// For loop
+
+for (let i = 0; i < 10; i++) {
+  if (i === 7){
+    console.log('7 is my favourite number');
+    continue;
+  }
+  if (i === 9) {
+    console.log('Stop the loop');
+    break;
+  }
+  console.log('Number ' + i)
+}
+// While loop
+let i = 0;
+
+while(i < 10) {
+  console.log('Number ' + i);
+  i++;
+}
+
+// Do while
+let iwd = 0;
+do {
+  console.log('Number ' + iwd);
+  iwd++;
+}
+while (iwd < 10);
+
+// Loop through array
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
+
+cars.forEach(function(car, index, array){
+  console.log(car);
+  console.log(`${index} : ${car}`);
+  console.log(array);
+});
+
+// Map
+const users = [
+  {id: 1, name: 'John'},
+  {id: 2, name: 'Sara'},
+  {id: 3, name: 'Karen'},
+  {id: 4, name: 'Steve'},
+];
+
+const ids = users.map(function(user) {
+  return user.name;
+});
+
+console.log(ids);
+
+// For in loop
+const userId = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 40
+};
+
+for (let i in userId) {
+  console.log(`${i} : ${userId[i]}`);
+}
