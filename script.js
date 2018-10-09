@@ -565,3 +565,96 @@ const userId = {
 for (let i in userId) {
   console.log(`${i} : ${userId[i]}`);
 }
+
+// Window methods / Objects / Properties
+
+// Alert
+// alert('Hello World');
+
+// Promt
+// const input = prompt();
+// alert(input);
+
+// Confirm
+/*if (confirm('Are you sure')) {
+  console.log('Yes');
+} else {
+  console.log('No');
+}*/
+
+// Outter height and width
+
+let wSize = window.outerHeight;
+let hSize = window.outerWidth;
+
+console.log(wSize, hSize);
+
+// Inner height and width
+
+wSize = window.innerHeight;
+hSize = window.innerWidth;
+console.log(wSize, hSize);
+
+// Scroll points
+
+let sizex = window.scrollY;
+let sizey = window.scrollX;
+console.log(sizey);
+
+let value;
+
+// Local object
+
+value = window.location;
+value = window.location.hostname;
+value = window.location.port;
+value = window.location.href;
+value = window.location.search;
+
+// Redirect
+// window.location.href = 'http://google.com';
+// Reload
+// window.location.reload();
+
+// History object
+
+window.history.go(1);
+value = window.history.length;
+
+// Navigator Object
+value = window.navigator;
+value = window.navigator.appName;
+value = window.navigator.appVersion;
+value = window.navigator.userAgent;
+value = window.navigator.platform;
+value = window.navigator.language;
+
+
+console.log(value);
+
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('Function scope :', a, b, c); // Function scope : 4 5 6
+}
+test();
+
+if(true) {
+  // Block scope
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('Block Scope: ', a, b, c); // Block Scope:  4 5 6
+}
+
+for(var a = 0; a < 10; a++){
+  console.log(`Loop: ${a}`);
+}
+
+console.log('Global Scope: ', a, b, c); // Global Scope:  4 2 3
