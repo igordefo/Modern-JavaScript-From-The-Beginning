@@ -657,4 +657,8 @@ for(var a = 0; a < 10; a++){
   console.log(`Loop: ${a}`);
 }
 
+<<<<<<< 8401908067608ae04bc1779b1aaafb3c771bc5ca:javascript-fundamentals.js
 console.log('Global Scope: ', a, b, c); // Global Scope:  4 2 3
+=======
+console.log('Global Scope: ', a, b, c); // Global Scope:  10 2 3
+>>>>>>> Rename file:javascript-fundamentals.js
