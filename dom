@@ -1,0 +1,15 @@
+var updateCards = products => {
+  var elements = document.querySelectorAll('.good');
+  for (var i = 0; i < elements.length; i++) {
+    if (products[i].isHit) {
+      elements[i].classList.add('good--hit');
+    }
+    if (products[i].inStock) {
+      elements[i].classList.add('good--available');
+    }else {
+      elements[i].classList.add('good--unavailable');
+    }
+    }
+  }
+    
+updateCards(assortmentData);
